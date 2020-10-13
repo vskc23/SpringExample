@@ -1,6 +1,7 @@
 package com.training.org;
 
 public class Parent {
+	
 	private Child child;
 	
 	public Parent() {
