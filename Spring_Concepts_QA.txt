@@ -1,0 +1,14 @@
+1) Spring Boot is a combination of Spring Framework, embedded HTTP servers (Tomcat/Jetty) and the XML bean configuration. It supports Rapid Application Deveopment.
+     We should use it because it enables to create a stand-alone application without setting up external XML configuration.
+
+2)The @SpringBootApplication is a combination of three annotations @Configuration (used for Java-based configuration), @ComponentScan (used for component scanning), and @EnableAutoConfiguration (used to enable auto-configuration in Spring Boot). 
+   Where as, The @EnableAutoConfiguration annotations enable auto-configuration features of Spring Boot, which configures modules based on the presence of certain classes on the classpath.
+
+
+3) Spring Initializr is a web-based tool provided by the Pivotal Web Service. With the help of Spring Initializr, we can easily generate the structure of the Spring Boot Project. It offers extensible API for creating JVM-based projects.
+    It also provides various options for the project that are expressed in a metadata model. The metadata model allows us to configure the list of dependencies supported by JVM and platform versions, etc. It serves its metadata in a well-known that provides necessary assistance to third-party clients.
+
+4) Spring Boot CLI (Command Line Interface) is a command line tool that you can use to quickly prototype with Spring. It lets you run Groovy scripts, which means that you have a familiar Java-like syntax without so much boilerplate code.
+
+5) Yes, we van change the port of embedded tomcat server in Spring Boot by changing the port number in the application.properties file in resources. We can set it as follows: server.port=9090.
+
