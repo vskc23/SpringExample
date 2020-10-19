@@ -2,8 +2,12 @@ package com.training.org;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class LoggingController {
@@ -20,4 +24,22 @@ public class LoggingController {
     
     return "Welcome to Spring Logging! Check the console to see the log messages.";
   }
+  
+  @RequestMapping("/greeting")
+  public ModelAndView welcome() {
+      ModelAndView modelAndView = new ModelAndView();
+      modelAndView.setViewName("Greeting.html");
+      return modelAndView;
+  }
+  
+  @GetMapping(value = "/welcome", produces = MediaType.TEXT_HTML_VALUE)
+  @ResponseBody
+  public String welcomeAsHTML() {
+      return "<html>\n" + "<header><title>Welcome</title></header>\n" +
+        "<body>\n" + "Hello world\n" + "</body>\n" + "</html>";
+  }
+
+  
+  
+  
 }
